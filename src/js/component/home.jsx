@@ -8,7 +8,7 @@ const Home = props => {
 	return (
 		<div
 			className="container d-flex bg-dark justify-content-center text-white align-items-center text-center overflow-hidden my-5"
-			style={{ width: "40%", height: "100px" }}>
+			style={{ width: "50%", height: "100px" }}>
 			<CounterContainer counter={props.counter} />
 		</div>
 	);
