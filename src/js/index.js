@@ -11,10 +11,10 @@ import "../styles/index.scss";
 //import your own components
 import Home from "./component/home.jsx";
 
-//render your react application
+//ponemos el contador en 0 y cada un segundo se va a sumar hasta ser 9, luego vuelve a ser 0
 let counter = 0;
 setInterval(function() {
+	counter === 10 ? (counter = 0) : counter;
 	ReactDOM.render(<Home counter={counter} />, document.querySelector("#app"));
 	counter++;
-	counter == 10 ? (counter = 0) : counter;
-}, 1);
+}, 1000);
