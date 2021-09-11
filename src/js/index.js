@@ -16,4 +16,5 @@ let counter = 0;
 setInterval(function() {
 	ReactDOM.render(<Home counter={counter} />, document.querySelector("#app"));
 	counter++;
-}, 1000);
+	counter == 10 ? (counter = 0) : counter;
+}, 1);
