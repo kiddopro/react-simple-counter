@@ -1,26 +1,43 @@
 import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import PropTypes from "prop-types";
 
 //create your first component
-const Home = () => {
+const Home = props => {
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div
+			className="container d-flex bg-dark justify-content-center text-white align-items-center text-center"
+			style={{ width: "30%", height: "100px" }}>
+			<div className="row">
+				<div className="col border bg-secondary">
+					<div>
+						<i className="far fa-clock"></i>
+					</div>
+				</div>
+				<div className="col border bg-secondary">
+					<div>0</div>
+				</div>
+				<div className="col border bg-secondary">
+					<div>0</div>
+				</div>
+				<div className="col border bg-secondary">
+					<div>0</div>
+				</div>
+				<div className="col border bg-secondary">
+					<div>0</div>
+				</div>
+				<div className="col border bg-secondary">
+					<div>0</div>
+				</div>
+				<div className="col border bg-secondary">
+					<div>{props.counter}</div>
+				</div>
+			</div>
 		</div>
 	);
+};
+
+Home.propTypes = {
+	counter: PropTypes.number
 };
 
 export default Home;
